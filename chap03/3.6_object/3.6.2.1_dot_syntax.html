@@ -1,0 +1,29 @@
+<!-- ドット記法でプロパティにアクセス -->
+<script>
+    let person = {
+        name: { first: "太郎", last: "独習" }, // オブジェクトのnameプロパティにオブジェクトを設定
+        age: 18,
+    };
+
+    console.log(person.age); // ageプロパティの取得
+    // >18
+
+    console.log(person.name.last); // nameプロパティに設定されたオブジェクトのlastプロパティの値の取得
+    // >独習
+
+    person.name.last = "次郎"; // lastプロパティの値の変更
+
+    person.gender = "男"; // genderプロパティと値の追加
+
+    person.family = { wife: "花子", child: "三郎" }; // familyプロパティに他のオブジェクトを追加
+
+    console.log(person.family.wife); // 追加したオブジェクトのプロパティを確認
+    // >花子
+
+    console.log(person); // オブジェクトの中身を確認
+    // >{name: {…}, age: 18, gender: '男', family: {…}}
+    //     age: 18
+    //     family: {wife: '花子', child: '三郎'}
+    //     gender: "男"
+    //     name: {first: '太郎', last: '次郎'}
+</script>

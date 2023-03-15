@@ -1,0 +1,8 @@
+<!-- constを使った場合は値の再代入は不可 -->
+<script>
+    const greeting = "こんにちは";
+    greeting = "さようなら";
+    // >Uncaught TypeError: Assignment to constant variable.
+
+    window.alert(greeting); // エラーのため、この行は実行されない
+</script>

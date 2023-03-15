@@ -1,0 +1,44 @@
+<!-- メソッドの記述例 
+　　　メソッド：オブジェクト内の関数-->
+<script>
+    let person = {
+        hello: function () {
+            console.log("こんにちは");
+        },
+    };
+    person.hello();
+    // >こんにちは
+
+    person.bye = function () {
+        console.log("さようなら");
+    };
+    person.bye();
+    // >さようなら
+
+    // メソッドは上書きすることも可能
+    person.hello = function () {
+        console.log("Hello");
+    };
+    person.hello();
+    // >Hello
+
+    // 省略記法　※ES6から
+    let personOmitted = {
+        hello() {
+            console.log("こんにちは");
+        },
+    };
+    personOmitted.hello();
+    // >こんにちは
+
+    // 識別子をそのままプロパティ名として利用
+    let val = 10; // 変数の宣言
+    function fn() {} // 関数の宣言
+
+    const obj = {
+        val, // 「val:val」を省略した記述
+        fn, // 「fn:fn」を省略した記述
+    };
+    console.log(obj);
+    // >{val: 10, fn: ƒ}
+</script>

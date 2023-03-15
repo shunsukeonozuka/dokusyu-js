@@ -1,0 +1,18 @@
+<!-- シンボルを使ってプロパティを設定 -->
+<script>
+    let mySymbol1 = Symbol(); // あるSymbolの値
+    let mySymbol2 = Symbol(); //別のSymbolの値
+
+    const obj = {
+        [mySymbol1]: "値1", // シンボルをキーにプロパティを定義
+        [mySymbol2]() {
+            console.log("こんにちは");
+        }, // シンボルをキーにメソッドを定義
+    };
+
+    console.log(obj[mySymbol1]); // シンボルをキーに値を取得
+    // >値1
+
+    obj[mySymbol2](); // シンボルをキーにメソッドを実行
+    // >こんにちは
+</script>

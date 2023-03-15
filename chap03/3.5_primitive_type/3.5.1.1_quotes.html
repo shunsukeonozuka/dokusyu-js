@@ -1,0 +1,16 @@
+<!-- シングルクォートやダブルクォートを文字として表示 -->
+<script>
+    //良い例
+    console.log('今日のおかずは"ウニ"だ！！'); // ダブルクォートを文字列に含めるには、シングルクォートで囲む
+    // >今日のおかずは"ウニ"だ！！
+
+    console.log("今日のおかずは'ウニ'だ！！"); // 上と逆のパターン
+    // >今日のおかずは'ウニ'だ！！
+
+    //悪い例
+    console.log("今日のおかずは"ウニ"だ！！"); // クォートの種類が同じだとエラー
+    // >Uncaught SyntaxError: missing ) after argument list
+
+    console.log('今日のおかずは'ウニ'だ！！');
+    // >Uncaught SyntaxError: missing ) after argument list
+</script>

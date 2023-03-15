@@ -1,0 +1,16 @@
+<!-- 型変換の使用例 -->
+<script>
+    // 複数のデータ型が1つの文に記述されている場合
+    console.log(1 + "1");
+    // >11
+    console.log(1 + Number("1")); // 文字列を数値に変換
+    // >2
+
+    // 値の比較
+    const num = 1;
+    const str = "1";
+    console.log(num === str); // 「===」：値と型の比較
+    // >false
+    console.log(num === Number(str)); // 文字列を数値に変換
+    // >true
+</script>

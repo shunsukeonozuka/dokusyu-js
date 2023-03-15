@@ -1,0 +1,15 @@
+<!-- 変数を使ったプロパティ名の指定 -->
+<script>
+    const members = {
+        member1: "太郎",
+        member2: "次郎",
+    };
+
+    const keyBase = "member";
+
+    console.log(members[keyBase + "1"]); // 文字列が結合されてmember1になる　※ドット記法ではできない技
+    // >太郎
+
+    console.log(members[keyBase + "2"]); // 文字列が結合されてmember2になる
+    // >次郎
+</script>
