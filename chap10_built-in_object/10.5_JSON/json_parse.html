@@ -1,0 +1,13 @@
+<script>
+    // ▶JSON文字列からJavaScriptオブジェクトに変換
+    
+    // JSON文字列
+    const json = '{"b":1,"c":{"d":2,"f":"hello"}}';
+
+    // オブジェクトに変換
+    const obj = JSON.parse(json);
+
+    // ドット記法で値の取得が可能
+    console.log(obj.b);
+    // >1
+</script>

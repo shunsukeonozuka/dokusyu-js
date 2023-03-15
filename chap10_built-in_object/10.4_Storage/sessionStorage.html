@@ -1,0 +1,12 @@
+<script>
+    // ▶セッションストレージにデータを保存
+
+    sessionStorage.setItem("favoriteFruit", "リンゴ");      // タブAで値を保存
+    sessionStorage.setItem("favoriteFruit", "バナナ");      // タブBで値を保存
+
+    console.log(sessionStorage.getItem("favoriteFruit"));   // タブAで実行した場合
+    // >リンゴ
+
+    console.log(sessionStorage.getItem("favoriteFruit"));   // タブBで実行した場合
+    // >バナナ
+</script>

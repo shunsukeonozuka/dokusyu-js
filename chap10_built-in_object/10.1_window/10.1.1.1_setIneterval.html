@@ -1,0 +1,13 @@
+<!-- setIntervalを使った繰り返し処理 -->
+<script>
+    let counter = 0;
+    const intervalID = setInterval(() => {
+        counter++;
+        console.log(counter);
+
+        if (counter === 3) {
+            clearInterval(intervalID); // インターバル処理の終了
+            console.log("インターバル終了");
+        }
+    }, 1000); // インターバル（間隔）のミリ秒
+</script>

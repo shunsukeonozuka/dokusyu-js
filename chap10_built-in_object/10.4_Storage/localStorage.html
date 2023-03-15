@@ -1,0 +1,9 @@
+<script>
+    // ▶ローカルストレージにデータを保存
+
+    localStorage.setItem("favoriteFruit", "リンゴ");      // タブAで値を保存
+    localStorage.setItem("favoriteFruit", "バナナ");      // タブBで値を保存
+
+    console.log(localStorage.getItem("favoriteFruit"));   // タブA、タブBどちらもバナナが取得される
+    // >バナナ
+</script>

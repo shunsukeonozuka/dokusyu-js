@@ -1,0 +1,8 @@
+<!-- 指定日付の2日後の日付を取得 -->
+<script>
+    const now = new Date(2021, 0, 31); // 2021/01/31
+
+    const twoDaysLater = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 2); // 現在日時に2日を加算して新しくDateオブジェクトを作成
+    console.log(twoDaysLater.toDateString());
+    // >Tue Feb 02 2021
+</script>

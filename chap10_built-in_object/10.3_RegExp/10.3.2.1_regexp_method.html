@@ -1,0 +1,30 @@
+<!-- RegExpオブジェクトのメソッド -->
+<script>
+    // test(testStr)
+    // 正規表現がtestStr内で一致する場合はtrueを返す
+    console.log(/abc/.test("012abc"));
+    // >true
+
+    // exec(testStr)
+    // 抽出結果を配列で返す
+    console.log(/a(b)c(d)e/.exec("babcde"));
+    // >(3) ['abcde', 'b', 'd', index: 1, input: 'babcde', groups: undefined]
+</script>
+
+<!-- Stringオブジェクトの正規表現関連メソッド -->
+<script>
+    // match(regex)
+    // 文字列と正規表現（regex）の一致結果を配列で返す
+    console.log("babcde".match(/a(b)c(d)e/));
+    // >(3) ['abcde', 'b', 'd', index: 1, input: 'babcde', groups: undefined]
+
+    // matchAll(regex)
+    // 文字列と正規表現（regex）のすべての一致箇所をイテレータとして返す
+    const str = "return request";
+    const it = str.matchAll(/re(\S+)/g);
+    for (const v of it) {
+        console.log(v);
+    }
+    // >(2) ['return', 'turn', index: 0, input: 'return request', groups: undefined]
+    // >(2) ['request', 'quest', index: 7, input: 'return request', groups: undefined]
+</script>

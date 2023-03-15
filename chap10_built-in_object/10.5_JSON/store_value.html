@@ -1,0 +1,16 @@
+<script>
+    // ▶画面更新ごとに1ずつ加算する処理
+
+    let data = localStorage.getItem("data");        // ローカルストレージからデータを取得
+    data = JSON.parse(data);                            // 取得したJSON文字列をオブジェクトに変換
+
+    if (data === null) {                                    // dataがローカルストレージから取得できなかった場合
+        data = {val: 0};                                     // デフォルト値を設定
+    }
+
+    console.log(data.val);                                  // data.valの状態をコンソールに表示
+    data.val++;                                                 // data.valに1加算
+
+    const json = JSON.stringify(data);              // JSON形式でローカルストレージにデータを保存
+    localStorage.setItem("data", json);
+</script>

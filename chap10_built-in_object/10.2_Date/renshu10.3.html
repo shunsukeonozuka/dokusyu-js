@@ -1,0 +1,17 @@
+<script>
+    let date = new Date(2022,4,1);
+    console.log(date);
+    // >Sun May 01 2022 00:00:00 GMT+0900 (日本標準時)
+
+    let date2 = new Date(2022,4 + 1,0);
+    console.log(date2);
+    // >Tue May 31 2022 00:00:00 GMT+0900 (日本標準時)
+
+    let date3 = new Date(date.getFullYear(), date.getMonth(), date.getDay() + 30);
+    console.log(date3);
+    // >Mon May 30 2022 00:00:00 GMT+0900 (日本標準時)
+
+    let date4 = new Date(date2.getFullYear(), date2.getMonth() + 20, date2.getDay());
+    console.log(date4);
+    // >Tue Jan 02 2024 00:00:00 GMT+0900 (日本標準時)
+</script>

@@ -1,0 +1,13 @@
+<!-- 不規則な文字列から携帯番号を抽出 -->
+<script>
+    const targetString = "5341nb;g090-1234-5678f29q0g070-9876-5432nfw"; // 検索対象文字列
+    const mobileNumPattern = /(070|080|090)-\d{4}-\d{4}/g; // 正規表現を定義
+    const mobileNums = targetString.matchAll(mobileNumPattern); // 一致を検索
+
+    // 取得された携帯番号をコンソールに表示
+    for (const mobileNum of mobileNums) {
+        console.log(mobileNum[0]);
+    }
+    // >090-1234-5678
+    // >070-9876-5432
+</script>

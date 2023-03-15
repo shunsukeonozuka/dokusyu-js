@@ -1,0 +1,12 @@
+<!-- 当月の月初、月末の取得 -->
+<script>
+    const date = new Date();
+
+    const firstDay = new Date(date.getFullYear(), date.getMonth(), 1); // 月初
+    console.log(firstDay.toDateString());
+    // >Thu Sep 01 2022
+
+    const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0); // 月末（日付に0を入れると前月の末日が取得できる）
+    console.log(lastDay.toDateString());
+    // >Fri Sep 30 2022
+</script>

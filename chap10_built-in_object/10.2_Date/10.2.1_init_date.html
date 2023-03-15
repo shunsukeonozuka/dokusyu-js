@@ -1,0 +1,43 @@
+<!-- 現在時刻を取得 -->
+<!-- 引数を省略した場合は現在時刻を保持するDateオブジェクトが生成される -->
+<script>
+    let now = new Date();
+    console.log(now);
+    // >Mon Sep 19 2022 20:23:31 GMT+0900 (日本標準時)
+</script>
+
+<!-- 1970年1月1日深夜0時から経過した時刻をミリ秒で指定 -->
+<script>
+    let date = new Date(24 * 60 * 60 * 1e3); // 24時間＊60分＊60秒＊1000ミリ秒＝1日
+    console.log(date);
+    // >Fri Jan 02 1970 09:00:00 GMT+0900 (日本標準時)
+</script>
+
+<!-- ISO8601の日付フォーマットで指定 -->
+<script>
+    // タイムゾーンの設定なし
+    // 現地時刻（JST）
+    const localTime = new Date("2021-05-04T02:35:00");
+    console.log(localTime.toISOString());
+    // >2021-05-03T17:35:00.000Z　　// -9時間された時刻が取得される
+
+    // 世界標準時を指定
+    // ZによりUTC時刻
+    const utcTime = new Date("2021-05-04T02:35:00Z");
+    console.log(utcTime.toISOString());
+    // >2021-05-04T02:35:00.000Z　　// UTC時刻のため変わらない
+
+    // ハワイ時間を指定
+    // -10時間によりハワイ時刻
+    const hawaiiTime = new Date("2021-05-04T02:35:00-10:00");
+    console.log(hawaiiTime.toISOString());
+    // >2021-05-04T12:35:00.000Z　　// +10時間された時刻が取得される
+</script>
+
+<!-- 年月日などを引数に分けたインスタンス化 -->
+<script>
+    // 月は0（1月）～11（12月）までの数値で表す
+    let date2 = new Date(2021, 0, 4, 2, 35, 0);
+    console.log(date2);
+    // >Mon Jan 04 2021 02:35:00 GMT+0900 (日本標準時)
+</script>

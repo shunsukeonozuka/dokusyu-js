@@ -1,0 +1,16 @@
+<script>
+    // ▶NumberやBooleanのラッパーオブジェクト
+
+    const num = 1000;
+    console.log(num.toExponential());   // 数値のラッパーオブジェクトのメソッドを呼び出し
+    // >1e+3
+
+    // console.log(1000.toExponential());   ←小数点と混同するためエラーとなる
+    // >Uncaught SyntaxError: Invalid or unexpected token
+
+    console.log((1000).toExponential());    // 括弧で囲めばOK
+    // >1e+3
+    
+    console.log(true.toString());   // 真偽値を文字列として取得も可能
+    // >true
+</script>
