@@ -1,0 +1,12 @@
+<script>
+    const arry = [1, 2, 3, 4, 5];
+
+    // すべての要素がコールバック関数の条件に一致するかを判定
+    const result1 = arry.every((value) => value > 0);
+    console.log(result1);
+    // >true
+
+    const result2 = arry.every((value) => value > 3);
+    console.log(result2);
+    // >false
+</script>

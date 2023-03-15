@@ -1,0 +1,11 @@
+<script>
+    const set = new Set();
+
+    // 配列オブジェクトかどうか判定
+    console.log(Array.isArray(set));
+    // >false
+
+    const convertedArray = Array.from(set);
+    console.log(Array.isArray(convertedArray));
+    // >true
+</script>

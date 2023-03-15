@@ -1,0 +1,22 @@
+<script>
+    // [商品名,価格]
+    const menu = new Map([
+        ["天津飯", 1000],
+        ["八宝菜", 500],
+        ["ゴマ団子", 200],
+    ]);
+
+    menu.set("杏仁豆腐", 300);
+    console.log(menu);
+    // >Map(4) {'天津飯' => 1000, '八宝菜' => 500, 'ゴマ団子' => 200, '杏仁豆腐' => 300}
+
+    console.log(menu.get("天津飯"));
+    // >1000
+
+    console.log(menu.has("ゴマ団子"));
+    // >true
+
+    menu.delete("八宝菜");
+    console.log(menu);
+    // >Map(3) {'天津飯' => 1000, 'ゴマ団子' => 200, '杏仁豆腐' => 300}
+</script>

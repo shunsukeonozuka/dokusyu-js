@@ -1,0 +1,17 @@
+<script>
+    // ▶要素を特定の値で埋める
+    // fillを使わない場合の例
+    const arry1 = [];
+    for (let i = 0; i < 100; i++) {
+        arry1.push(0);
+    }
+    console.log(arry1);
+    // >[0,0,0,0,....]　←長さ100,初期値0の配列
+
+    // fillを使った場合の例
+    const arry2 = new Array(100);
+    arry2.fill(0); //すべての要素に0を設定
+
+    console.log(arry2);
+    // >[0,0,0,0,....]　←長さ100,初期値0の配列
+</script>

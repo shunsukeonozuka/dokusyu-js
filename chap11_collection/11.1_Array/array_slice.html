@@ -1,0 +1,18 @@
+<script>
+    // ▶特定の要素を抽出した新しい配列の作成
+    const fruits = ["banana", "orange", "grape"];
+    const newFruits = fruits.slice(1,2);    //添字1から添字2の直前の要素までを抽出
+    console.log(newFruits);
+    // >['orange']　←終了位置の要素（グレープ）は含んでいないことに注意
+
+    console.log(fruits);
+    // >['banana', 'orange', 'grape']　　←元の配列に影響はない
+
+    const toEndFruits = fruits.slice(1);    //終了位置を指定しない場合、開始位置からすべての要素が複製される
+    console.log(toEndFruits);
+    // >['orange', 'grape']
+
+    const allFruits = fruits.slice();   //開始位置、終了位置を指定しない場合、すべての要素が複製される
+    console.log(allFruits);
+    // >['banana', 'orange', 'grape']
+</script>

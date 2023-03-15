@@ -1,0 +1,14 @@
+<!-- Mapのループ -->
+<script>
+    const map = new Map([
+        ["キー１", "値１"],
+        ["キー２", "値２"],
+    ]);
+
+    map.forEach((value, key, map) => {
+        console.log(`value:[${value}],key:[${key}],map:`, map);
+    });
+
+    // >value:[値１],key:[キー１],map: Map(2)
+    // >value:[値２],key:[キー２],map: Map(2)
+</script>

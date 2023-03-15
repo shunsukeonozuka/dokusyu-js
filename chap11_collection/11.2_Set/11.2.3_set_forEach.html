@@ -1,0 +1,11 @@
+<!-- Setのループ -->
+<script>
+    const set = new Set(["値1", "値2"]);
+
+    set.forEach((value, sameValue, set) => {
+        console.log(`value:[${value}], sameValue:[${sameValue}], set:`, set);
+    });
+
+    // >value:[値1], sameValue:[値1], set: Set(2)
+    // >value:[値2], sameValue:[値2], set: Set(2)
+</script>

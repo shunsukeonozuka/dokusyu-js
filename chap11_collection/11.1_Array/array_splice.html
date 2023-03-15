@@ -1,0 +1,19 @@
+<script>
+    // ▶要素の切り取り
+
+    const fruits = ["banana", "orange", "grape"];
+    let deletedVal = fruits.splice(1,2);    //添字1から長さ2つ分切り取り
+    console.log(fruits);
+    // >["banana"]
+
+    console.log(deletedVal);
+    // >["orange", "grape"]
+
+    
+    // ▶切り取った箇所に要素を追加
+
+    const fruits2 = ["banana", "orange", "grape"];
+    fruits2.splice(1,1, "apple", "lemon");      //オレンジを削除し、リンゴ、レモンを追加
+    console.log(fruits2);
+    // >['banana', 'apple', 'lemon', 'grape']
+</script>

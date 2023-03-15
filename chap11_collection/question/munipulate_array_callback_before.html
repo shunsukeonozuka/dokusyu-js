@@ -1,0 +1,55 @@
+<script>
+    // {タイトル, 優先順位, 完了か否か}
+    // 優先順位は1:低、2:中、3:高
+    const todos = [
+        { title: "晩ごはん", priority: 2, completed: false },
+        { title: "ゴミ出し", priority: 1, completed: true },
+        { title: "食材の買い出し", priority: 3, completed: false },
+        { title: "洗濯", priority: 2, completed: true },
+        { title: "録画の視聴", priority: 1, completed: false },
+    ];
+
+    for (let index = 0; index < todos.length; index++) {
+        let { title, completed } = todos[index];
+
+        if (completed) {
+            console.log(`${title}は完了！`);
+        } else {
+            console.log(`${title}をやらないと！`);
+        }
+    }
+
+    let notCompleted = [];
+    for (let index = 0; index < todos.length; index++) {
+        let { completed } = todos[index];
+        if (!completed) {
+            notCompleted.push(todos[index]);
+        }
+    }
+    console.log(notCompleted);
+
+    function compare(val1, val2) {
+        if (val1.priority < val2.priority) {
+            return 1;
+        }
+        if (val1.priority > val2.priority) {
+            return -1;
+        }
+        return 0;
+    }
+    notCompleted.sort(compare);
+    console.log(notCompleted);
+
+    function printTodo(todos) {
+        for (let index = 0; index < todos.length; index++) {
+            let { title, completed } = todos[index];
+
+            if (completed) {
+                console.log(`${title}は完了！`);
+            } else {
+                console.log(`${title}をやらないと！`);
+            }
+        }
+    }
+    printTodo(notCompleted);
+</script>

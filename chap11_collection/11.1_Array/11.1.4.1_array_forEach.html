@@ -1,0 +1,26 @@
+<!-- forEach：配列の各要素を使って繰り返し処理を行う -->
+<script>
+    const arry = [1, 2, 3, 4, 5];
+
+    arry.forEach(function (value, index, arry) {
+        console.log(value, index, arry);
+    });
+    // >1 0 Array(5)
+    // >2 1 Array(5)
+    // >3 2 Array(5)
+    // >4 3 Array(5)
+    // >5 4 Array(5)
+</script>
+
+<!-- 上記の処理をfor文で記述した場合 -->
+<script>
+    for (let index = 0; index < arry.length; index++) {
+        let value = arry[index];
+        console.log(value, index, arry);
+    }
+</script>
+
+<!-- アロー関数を使うことでより簡略化できる -->
+<script>
+    arry.forEach((value, index, arry) => console.log(value, index, arry));
+</script>

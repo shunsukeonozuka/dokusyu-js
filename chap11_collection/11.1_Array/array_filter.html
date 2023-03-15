@@ -1,0 +1,12 @@
+<script>
+    const arry = [1, 2, 3, 4, 5];
+
+    function gt3(value) {
+        return value > 3;
+    }
+
+    // コールバック関数の条件に合う要素のみを保持する配列を作成
+    const newArry = arry.filter(gt3);
+    console.log(newArry);
+    // >(2) [4, 5]
+</script>

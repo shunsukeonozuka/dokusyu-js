@@ -1,0 +1,11 @@
+<script>
+    const map = new Map([
+        ["キー１", "値１"],
+        ["キー２", "値２"],
+    ]);
+
+    // Mapからオブジェクトに変換
+    const obj = Object.fromEntries(map);
+    console.log(obj["キー１"]);
+    // >値１
+</script>

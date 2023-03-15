@@ -1,0 +1,12 @@
+<script>
+    const fruits = new Map();
+    fruits.set(1, "apple");
+
+    const emptyObj = {};
+    fruits.set(emptyObj, "orange");
+
+    fruits.set(true, "grape");
+
+    console.log(fruits);
+    // >Map(3) {1 => 'apple', {…} => 'orange', true => 'grape'}
+</script>

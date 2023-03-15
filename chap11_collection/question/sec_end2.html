@@ -1,0 +1,56 @@
+<script>
+    class Person {
+        constructor(fullname, age, gender) {
+            this.fullname = fullname;
+            this.age = age;
+            this.gender = gender;
+        }
+    }
+
+    const taro = new Person("太郎", 18, "男");
+    const jiro = new Person("次郎", 15, "男");
+    const saburo = new Person("三郎", 10, "男");
+    const hanako = new Person("花子", 23, "女");
+    const hanayo = new Person("花代", 18, "女");
+
+    const friends = new Map();
+
+    // ①
+    const taroFriends = new Set([jiro, hanayo]);
+    friends.set(taro, taroFriends);
+
+    // ②
+    const hanakoFriends = new Set([hanayo, taro, saburo]);
+    friends.set(hanako, hanakoFriends);
+
+    // ③
+    taroFriends.add(hanako);
+
+    // ④
+    const taroFriendsArry = Array.from(taroFriends);
+    console.log(
+        taroFriendsArry.sort((val1, val2) => {
+            return val1[1] - val2[1];
+        })
+    );
+
+    // ⑤
+    let count = 0;
+    taroFriends.forEach((value) => {
+        if (value.gender === "女") {
+            count++;
+        }
+    });
+    console.log(count);
+
+    // ⑥
+    for (const [person, friendSet] of friends) {
+        let friendStr = "";
+        for (const friend of friendSet) {
+            friendStr += `[${friend.fullname}]`;
+        }
+        console.log(
+            `私の名前は${person.fullname}です。友達には${friendStr}がいます。`
+        );
+    }
+</script>

@@ -1,0 +1,52 @@
+<script>
+    const chuka = ["八宝菜", "餃子", "回鍋肉", "青椒肉絲"];
+
+    // 末尾に追加
+    chuka.push("天津飯");
+    console.log(chuka);
+    // >['八宝菜', '餃子', '回鍋肉', '青椒肉絲', '天津飯']
+
+    // 先頭に追加
+    chuka.unshift("チャーハン");
+    console.log(chuka);
+    // >['チャーハン', '八宝菜', '餃子', '回鍋肉', '青椒肉絲', '天津飯']
+
+    // 先頭を削除
+    chuka.shift();
+    console.log(chuka);
+    // >['八宝菜', '餃子', '回鍋肉', '青椒肉絲', '天津飯']
+
+    // 末尾を削除
+    chuka.pop();
+    console.log(chuka);
+    // >['八宝菜', '餃子', '回鍋肉', '青椒肉絲']
+
+    // 添字2の要素を削除
+    chuka.splice(2,1);
+    console.log(chuka);
+    // >['八宝菜', '餃子', '青椒肉絲']
+
+    // インデックス確認
+    console.log(chuka.indexOf("餃子"));
+    // >1
+
+    // 結合
+    chuka2 = chuka.concat(["杏仁豆腐", "ごま豆腐"]);
+    console.log(chuka2);
+    // >['八宝菜', '餃子', '青椒肉絲', '杏仁豆腐', 'ごま豆腐']
+
+    // 要素抽出して新しい配列の作成
+    const newChuka = chuka2.slice(1,4);
+    console.log(newChuka);
+    // >['餃子', '青椒肉絲', '杏仁豆腐']
+    console.log(chuka2);
+    // >['八宝菜', '餃子', '青椒肉絲', '杏仁豆腐', 'ごま豆腐']
+
+    // 逆順
+    newChuka.reverse();
+    console.log(newChuka);
+
+    // 真偽値確認
+    console.log(newChuka.includes("八宝菜"));
+    // >false
+</script>

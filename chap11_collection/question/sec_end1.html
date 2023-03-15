@@ -1,0 +1,45 @@
+<script>
+    // [商品名,個数,金額]
+    const orders = [
+        ["八宝菜", 1, 600],
+        ["餃子", 4, 200],
+        ["回鍋肉", 1, 500],
+        ["青椒肉絲", 2, 700],
+    ];
+
+    orders.splice(2, 1);
+    console.log(orders);
+    /*     [
+        ["八宝菜", 1, 600],
+        ["餃子", 4, 200],
+        ["青椒肉絲", 2, 700],
+    ]; */
+
+    console.log(orders.every((value) => value[2] < 1000));
+    // >true
+
+    // 降順
+    function descending(val1, val2) {
+        return val2[2] - val1[2];
+    }
+    console.log(orders.sort(descending));
+    /* [
+        ["青椒肉絲", 2, 700],
+        ["八宝菜", 1, 600],
+        ["餃子", 4, 200],
+    ]; */
+
+    orders.forEach((value) => {
+        console.log(`${value[0]}を${value[2]}円で${value[1]}個注文しました。`);
+    });
+    // ＞青椒肉絲を700円で2個注文しました。
+    // ＞八宝菜を600円で1個注文しました。
+    // ＞餃子を200円で4個注文しました。
+
+    let totalAmount = 0;
+    orders.forEach((value) => {
+        totalAmount += value[2];
+    });
+    console.log(`合計金額は${totalAmount}円です。`);
+    // >合計金額は1500円です。
+</script>

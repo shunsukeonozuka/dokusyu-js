@@ -1,0 +1,21 @@
+<script>
+    // ▶オブジェクトや配列の要素を引数として抽出
+    const fruitsArry = ["banana", "orange", "grape"];
+    const fruitsObj = { banana: "バナナ", orange: "オレンジ" };
+
+    // 3つ目の要素のみ関数内で使用する
+    function bunkatuArry([, , fruit3]) {
+        console.log(fruit3);
+    }
+
+    bunkatuArry(fruitsArry);
+    // >grape
+
+    // orangeのみ引数として抽出
+    function bunkatuObj({ orange }) {
+        console.log(orange);
+    }
+
+    bunkatuObj(fruitsObj);
+    // >オレンジ
+</script>

@@ -1,0 +1,19 @@
+<script>
+    let chuka = new Set(["八宝菜", "餃子", "回鍋肉", "青椒肉絲", "餃子"]);
+
+    chuka.add("杏仁豆腐");
+    chuka.add("餃子");
+    console.log(chuka);
+    // >Set(5) {'八宝菜', '餃子', '回鍋肉', '青椒肉絲', '杏仁豆腐'}
+
+    chuka.delete("回鍋肉");
+    console.log(chuka);
+    // >Set(4) {'八宝菜', '餃子', '青椒肉絲', '杏仁豆腐'}
+
+    console.log(chuka.has("八宝菜"));
+    // >true
+
+    chuka = Array.from(chuka);
+    console.log(chuka.join(" "));
+    // >八宝菜 餃子 青椒肉絲 杏仁豆腐
+</script>

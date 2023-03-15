@@ -1,0 +1,16 @@
+<!-- 名前付き関数を使った例 -->
+<script>
+    const arry = [1, 2, 3, 4, 5];
+
+    // 名前付き関数としてforEachで使用するコールバック関数を定義　※引数はvalue
+    function multiply5(value) {
+        console.log(value * 5);
+    }
+
+    arry.forEach(multiply5); // 名前付き関数をコールバック関数として渡す
+    // >5
+    // >10
+    // >15
+    // >20
+    // >25
+</script>
