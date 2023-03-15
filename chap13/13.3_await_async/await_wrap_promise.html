@@ -1,0 +1,15 @@
+<script>
+    const prom = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("この値を取り出します。");
+        }, 1000);
+    });
+
+    async function asyncFunction() {
+        const value = await prom; //resolveの実引数の値がvalueに代入される。また、次行の処理はpromのステータスがfulfilledになるまで待機。
+        console.log(value);
+    }
+
+    asyncFunction();
+    // >この値を取り出します。
+</script>

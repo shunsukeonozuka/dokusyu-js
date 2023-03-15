@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <button>ボタン</button>
+        <script>
+            function sleep(ms) {
+                const startTime = new Date();
+                // msミリ秒分ループを継続
+                while (new Date() - startTime < ms);
+
+                alert("sleep関数が完了しました。");
+            }
+
+            sleep(3000);
+
+            // ボタンクリック時の処理
+            const btn = document.querySelector("button");
+
+            function clickHandler() {
+                alert("ボタンがクリックされました。");
+            }
+
+            btn.addEventListener("click", clickHandler); //「ボタン」にアクションを登録
+        </script>
+    </body>
+</html>

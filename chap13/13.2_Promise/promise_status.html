@@ -1,0 +1,16 @@
+<script>
+    let promResolve, promReject;
+
+    const prom = new Promise((resolve, reject) => {
+        promResolve = resolve;
+        promReject = reject;
+    });
+
+    console.log(prom);
+    // >Promise {<pending>}
+
+    promResolve("引数"); //resolve実行
+
+    console.log(prom);
+    // >Promise {<fulfilled>: '引数'}
+</script>

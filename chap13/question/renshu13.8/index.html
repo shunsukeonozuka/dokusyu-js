@@ -1,0 +1,11 @@
+<script>
+    async function dailyFetch() {
+        const response = await fetch("daily.json");
+        const data = await response.json();
+        console.log(data.word);
+    }
+
+    dailyFetch();
+
+    // >今日はいい天気でした。
+</script>

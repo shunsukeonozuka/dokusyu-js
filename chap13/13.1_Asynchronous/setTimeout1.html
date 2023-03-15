@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <button>ボタン</button>
+        <script>
+            function sleep(ms) {
+                setTimeout(() => {
+                    alert("sleep関数が完了しました。");
+                }, ms);
+            }
+
+            sleep(3000);
+
+            // ボタンクリック時の処理
+            const btn = document.querySelector("button");
+
+            function clickHandler() {
+                alert("ボタンがクリックされました。");
+            }
+
+            btn.addEventListener("click", clickHandler); //「ボタン」にアクションを登録
+        </script>
+    </body>
+</html>

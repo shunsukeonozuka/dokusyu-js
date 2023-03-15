@@ -1,0 +1,102 @@
+<script>
+    function run(personName) {
+        return new Promise((resolve, reject) => {
+            const time = Math.floor(Math.random() * 11);
+
+            setTimeout(() => {
+                if (time % 4 === 0) {
+                    // 途中でコケる
+                    reject({ personName });
+                } else {
+                    // 完走
+                    resolve({ personName, time });
+                }
+            }, time);
+        });
+    }
+
+    // ①
+    /* function logFn(obj) {
+        console.log(`${obj.personName}のタイムは${obj.time}です。`);
+    }
+
+    async function execute() {
+        try {
+            let obj = await run("太郎");
+            logFn(obj);
+
+            obj = await run("次郎");
+            logFn(obj);
+
+            obj = await run("三郎");
+            logFn(obj);
+        } catch (error) {
+            console.error(`${error.personName}がこけました。レースやり直し！`);
+        }
+    }
+    execute(); */
+
+    // ②
+    /* async function execute() {
+        try {
+            let obj = await Promise.any([
+                run("太郎"),
+                run("次郎"),
+                run("三郎"),
+            ]);
+            console.log(
+                `一番最初にゴールしたのは${obj.personName}で、タイムは${obj.time}です。`
+            );
+        } catch (error) {
+            console.error(`レースやり直し！`);
+        }
+    }
+    execute(); */
+
+    // ③
+    /* async function execute() {
+        try {
+            let obj = await Promise.all([
+                run("太郎"),
+                run("次郎"),
+                run("三郎"),
+            ]);
+
+            for (const { personName, time } of obj) {
+                console.log(`${personName}のタイムは${time}です。`);
+            }
+        } catch (error) {
+            console.error(`${error.personName}がこけました。レースやり直し！`);
+        }
+    }
+    execute(); */
+
+    // ④
+    /* async function execute() {
+        let obj = await Promise.allSettled([run("太郎"), run("次郎")]);
+
+        for (const { status, value, reason } of obj) {
+            if (status === "fulfilled") {
+                console.log(`${value.personName}はゴールしました。`);
+            } else {
+                console.log(`${reason.personName}はこけました。`);
+            }
+        }
+    }
+    execute(); */
+
+    // ⑤
+    async function execute() {
+        try {
+            let obj = await Promise.race([
+                run("太郎"),
+                run("次郎"),
+                run("三郎"),
+            ]);
+            console.log(`${obj.personName}はゴールしました。`);
+        } catch (error) {
+            console.error(`${error.personName}はこけました。`);
+        }
+    }
+    execute();
+</script>

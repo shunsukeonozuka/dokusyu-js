@@ -1,0 +1,22 @@
+<script>
+    new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const currentSeconds = new Date().getSeconds();
+
+            if (currentSeconds % 2) {
+                reject(currentSeconds);
+            } else {
+                resolve(currentSeconds);
+            }
+        }, 1000);
+    })
+        .then((currentSeconds) => {
+            console.log(`${currentSeconds}は偶数のため、成功とします。`);
+        })
+        .catch((currentSeconds) => {
+            console.log(`${currentSeconds}は奇数のため、エラーとします。`);
+        })
+        .finally(() => {
+            console.log("処理を終了します。");
+        });
+</script>

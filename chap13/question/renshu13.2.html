@@ -1,0 +1,29 @@
+<script>
+    function delay(fn, message, ms) {
+        setTimeout(() => {
+            fn(message);
+        }, ms);
+    }
+
+    // ①
+    delay(console.log, "こんにちは", 1000);
+
+    // ②
+    delay(alert, "さようなら", 2000);
+
+    // ③
+    delay(
+        function (message1) {
+            console.log(message1);
+            delay(
+                function (message2) {
+                    console.log(message2);
+                },
+                "さらに1秒経ちました。",
+                1000
+            );
+        },
+        "1秒経ちました。",
+        1000
+    );
+</script>

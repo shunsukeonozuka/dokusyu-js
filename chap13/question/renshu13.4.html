@@ -1,0 +1,15 @@
+<script>
+    function increment2(num) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                console.log(num);
+                resolve(num + 2);
+            }, 1000);
+        });
+    }
+
+    increment2(0)
+        .then((num) => increment2(num))
+        .then((num) => increment2(num))
+        .then((num) => increment2(num));
+</script>

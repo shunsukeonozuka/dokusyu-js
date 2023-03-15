@@ -1,0 +1,20 @@
+<script>
+    setTimeout(() => {
+        console.log("Taskの実行");
+    });
+
+    Promise.resolve().then(() => {
+        console.log("Job1の実行");
+    });
+
+    Promise.resolve().then(() => {
+        console.log("Job2の実行");
+    });
+
+    console.log("グローバルコンテキスト終了");
+
+    // >グローバルコンテキスト終了
+    // >Job1の実行
+    // >Job2の実行
+    // >Taskの実行
+</script>

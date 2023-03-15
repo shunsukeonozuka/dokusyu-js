@@ -1,0 +1,10 @@
+<script>
+    Promise.reject("エラーの理由").catch((error) => {
+        console.log(error);
+    });
+
+    console.log("グローバルコンテキスト終了");
+
+    // >グローバルコンテキスト終了
+    // >エラーの理由
+</script>
