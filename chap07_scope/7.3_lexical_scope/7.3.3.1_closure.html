@@ -1,0 +1,15 @@
+<!-- クロージャ -->
+<!-- 関数内で使用されている変数がレキシカルスコープの変数の値を保持し続けている状態のこと -->
+
+<!-- レキシカルスコープの変数の値を使用している関数が戻り値となる場合 -->
+<script>
+    function factory(greeting) {
+        function innerFn(name) {
+            console.log(greeting + " " + name); // レキシカルスコープの変数（greeting）を使用
+        }
+        return innerFn; // 関数innerFnを実行結果として返す
+    }
+
+    const hello = factory("こんにちは");
+    hello("太郎");
+</script>

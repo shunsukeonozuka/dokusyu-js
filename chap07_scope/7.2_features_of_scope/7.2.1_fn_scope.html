@@ -1,0 +1,27 @@
+<!-- 関数スコープ -->
+<!-- 異なる関数スコープに属する変数や関数は使用できない -->
+<script>
+    function fnA() {
+        let valA = "fnA内の値";
+        const subA = function () {
+            console.log("fnA内の関数");
+        };
+
+        console.log(valA); // 参照可
+        subA(); // 実行可
+    }
+
+    fnA();
+    // >fnA内の値
+    // >fnA内の関数
+
+    function fnB() {
+        console.log(valA); // スコープ外のためエラー発生
+        subA(); // スコープ外のためエラー発生
+    }
+
+    fnB();
+
+    console.log(valA); // スコープ外のためエラー発生
+    subA(); // スコープ外のためエラー発生
+</script>

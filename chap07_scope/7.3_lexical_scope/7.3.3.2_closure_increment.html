@@ -1,0 +1,18 @@
+<!-- 数値を関数の実行ごとに1を加算し、ログに出力 -->
+<script>
+    function incrementFactory() {
+        let count = 0;
+        // 無名関数（関数A）をincrementFactoryの実行結果として返す
+        return function () {
+            console.log(++count); // レキシカルスコープのcountの値を使用
+        };
+    }
+
+    const increment = incrementFactory();
+    increment(); // この関数の実行は関数Aの実行を意味する
+    // >1
+    increment();
+    // >2
+    increment();
+    // >3
+</script>

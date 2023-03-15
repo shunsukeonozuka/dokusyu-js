@@ -1,0 +1,12 @@
+<!-- モジュールスコープ -->
+<!-- ES Modulesを有効化した際に生成されるスコープ -->
+<!-- 同じモジュールの変数・関数のみ参照可能となる -->
+<script type="module">
+    let moduleVal = "モジュールスコープの変数";
+    console.log(moduleVal);
+    // >モジュールスコープの変数
+</script>
+<script type="module">
+    console.log(moduleVal); // エラー発生
+    // >Uncaught ReferenceError: moduleVal is not defined
+</script>

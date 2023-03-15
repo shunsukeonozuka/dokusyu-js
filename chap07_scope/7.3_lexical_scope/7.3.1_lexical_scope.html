@@ -1,0 +1,25 @@
+<!-- レキシカルスコープ -->
+<!-- 実行中のコードから見た外側のスコープのことをレキシカルスコープと呼ぶ -->
+<script>
+    let scriptVal = "スクリプトスコープの変数";
+
+    function fn() {
+        let fnVal = "関数スコープの変数";
+
+        if (true) {
+            console.log(scriptVal, fnVal);
+            // >スクリプトスコープの変数 関数スコープの変数     // レキシカルスコープのため参照可
+            console.log(scriptFn());
+            // >scriptFnの実行結果      // レキシカルスコープのため参照可
+            console.log(sVal);
+            // >Uncaught ReferenceError: sVal is not defined    // レキシカルスコープでないため参照不可
+        }
+    }
+
+    function scriptFn() {
+        let sVal = "scriptFnの変数";
+        return "scriptFnの実行結果";
+    }
+
+    fn();
+</script>

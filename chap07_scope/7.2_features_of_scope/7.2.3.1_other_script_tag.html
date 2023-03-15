@@ -1,0 +1,12 @@
+<!-- グローバルスコープの変数や関数はscriptタグをまたいで参照可能 -->
+<script>
+    var globalVal = "グローバル変数";
+    function globalFn() {
+        return "グローバル関数";
+    }
+</script>
+
+<script>
+    console.log(globalVal, globalFn()); // 異なるscriptタグから参照可能
+    // >グローバル変数 グローバル関数
+</script>

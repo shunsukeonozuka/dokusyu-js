@@ -1,0 +1,24 @@
+<!-- ブロックスコープ -->
+<script>
+    if (true) {
+        // ブロックスコープ開始
+        let letVal = "letで宣言";
+        const constFn = function () {
+            console.log("constで宣言");
+        };
+
+        var varVal = "varで宣言";
+        function fnStmt() {
+            console.log("関数宣言");
+        }
+        // ブロックスコープ終了
+    }
+
+    // 以下、別のブロックスコープ
+    if (true) {
+        console.log(letVal); // letは他ブロックから取得不可（エラー発生）
+        constFn(); // constは他ブロックから取得不可（エラー発生）
+        console.log(varVal); // varは他ブロックスコープからも取得可能（グローバルスコープ）
+        fnStmt(); // 関数宣言は他ブロックスコープからも取得可能（グローバルスコープ）
+    }
+</script>

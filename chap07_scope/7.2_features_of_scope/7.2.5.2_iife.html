@@ -1,0 +1,14 @@
+<!-- 即時関数の使用例 -->
+<!-- ES Modulesが追加される前は即時関数を使ってスコープ制限をしていた -->
+<script>
+    (function fnA() {
+        // 即時関数fnAのスコープ
+        const val = "即時関数外からは参照不可";
+    })();
+
+    (function fnB() {
+        // 即時関数fnBのスコープ
+        console.log(val); // エラー発生
+        // >Uncaught ReferenceError: val is not defined
+    })();
+</script>

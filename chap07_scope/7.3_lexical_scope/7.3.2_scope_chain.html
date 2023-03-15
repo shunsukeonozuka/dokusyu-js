@@ -1,0 +1,19 @@
+<!-- レキシカルスコープに同じ名前の変数が複数存在する場合 -->
+<script>
+    window.whichVal = "グローバルスコープ";
+    let whichVal = "スクリプトスコープ";
+
+    function outerScope() {
+        let whichVal = "outerScope関数スコープ";
+
+        function innerScope() {
+            let whichVal = "innerScope関数スコープ";
+            console.log(whichVal); // 自スコープ→外側のスコープ→外側のスコープ→...
+            // >innerScope関数スコープ
+        }
+
+        innerScope();
+    }
+
+    outerScope();
+</script>

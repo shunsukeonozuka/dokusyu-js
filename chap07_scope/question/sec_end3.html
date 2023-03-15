@@ -1,0 +1,14 @@
+<script>
+    function delayMessageFactory(callback, num) {
+        function innerFn(param) {
+            setTimeout(function() {callback(param);}, num);
+        }
+        return innerFn;
+    }
+
+    const dialog = delayMessageFactory(alert, 2000);
+    dialog("こんにちは");
+
+    const log = delayMessageFactory(console.log, 1000);
+    log("こんばんは");
+</script>

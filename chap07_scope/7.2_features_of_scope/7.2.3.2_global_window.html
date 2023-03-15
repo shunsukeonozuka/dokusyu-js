@@ -1,0 +1,11 @@
+<!-- グローバル変数はWindowオブジェクトのプロパティに格納される -->
+<script>
+    var globalVal = "グローバル変数";
+    function globalFn() {
+        return "グローバル関数";
+    }
+    console.log(globalVal, window.globalVal); // Windowオブジェクトのプロパティ
+    // >グローバル変数 グローバル変数
+    console.log(globalFn(), window.globalFn()); // Windowオブジェクトのメソッド
+    // >グローバル関数 グローバル関数
+</script>

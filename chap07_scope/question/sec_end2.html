@@ -1,0 +1,38 @@
+<script>
+    let val = "グローバル";
+    function fn1() {
+        let val = "関数内";
+
+        if (Math.random() < .5) {
+            console.log("①："+val);
+            // >関数内
+            fn1();
+            // 実行可
+        }
+
+        function fn2() {
+            console.log("③："+val);
+            // >関数内
+        }
+
+        console.log("④："+val);
+        // >関数内
+
+        fn2();
+        return val;
+    }
+
+    function fn3() {
+        console.log("⑤："+val);
+        // >グローバル
+    }
+
+    console.log("⑥："+val);
+    // >グローバル
+
+    const result = fn1();
+    console.log("⑦："+result);
+    // >関数内
+
+    fn3();
+</script>

@@ -1,0 +1,14 @@
+<script>
+    function chance() {
+        let rand = Math.random();
+        
+        let result;
+        if (rand<.5) {
+            result = "成功";
+        } else {
+            result = "失敗";
+        }
+        return result;
+    }
+    console.log(chance());
+</script>

@@ -1,0 +1,27 @@
+<!-- スクリプトスコープ -->
+
+<!-- トップレベルに記述したlet・constで定義された変数・関数はスクリプトスコープとなる -->
+<script>
+    let scriptVal = "スクリプトスコープの変数";
+    const scriptFn = function () {
+        return "スクリプトスコープの関数";
+    };
+</script>
+<script>
+    console.log(scriptVal, scriptFn());
+    // >スクリプトスコープの変数 スクリプトスコープの関数
+</script>
+
+<!-- スクリプトスコープの変数はWindowオブジェクトのプロパティにはならない -->
+<script>
+    console.log(window.scriptVal);
+    // >undefined
+</script>
+
+<!-- スクリプトスコープとグローバルスコープに同名が存在する場合はスクリプトスコープが取得される -->
+<script>
+    let globalVal = "スクリプトスコープの変数";
+    window.globalVal = "グローバル変数";
+    console.log(globalVal);
+    // >スクリプトスコープの変数
+</script>
