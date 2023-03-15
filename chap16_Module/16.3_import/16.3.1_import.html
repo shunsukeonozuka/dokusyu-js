@@ -1,0 +1,23 @@
+<script>
+    // 名前付きエクスポートをインポート
+    import { exportedVariable, exportedFunction, ExportedClass } from "/path/to/module.js";
+
+    // 別名を付けてインポート
+    import { exportedName as importedName } from "/path/to/module.js";
+
+    // デフォルトエクスポートと名前付きエクスポートをオブジェクトのプロパティとしてインポート
+    // デフォルトエクスポートはdefaultプロパティに格納される
+    import * as moduleObject from "/path/to/module.js";
+
+    // デフォルトエクスポートを読み込む
+    import defaultExport from "/path/to/export.js";
+
+    // デフォルトエクスポートと名前付きエクスポートをそれぞれインポート
+    import defaultExport, { namedExport1, namedExport2 } from "/path/to/module.js";
+
+    // デフォルトエクスポートと名前付きエクスポートをオブジェクトのプロパティとしてそれぞれインポート
+    import defaultExport, * as moduleObject from "/path/to/module.js";
+
+    // インポートなしにモジュール内のコードを一度だけ実行
+    import "/path/to/module.js";
+</script>

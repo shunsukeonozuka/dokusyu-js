@@ -1,0 +1,27 @@
+<script type="module">
+    // 静的インポート
+    import defaultFn, { object, fn, exClass } from "./exports.js";
+
+    defaultFn();
+    // >関数のデフォルトエクスポート
+
+    console.log(object);
+    // >{ apple: "リンゴ", banana: "バナナ" }
+
+    fn();
+    // >関数のエクスポート
+
+    exClass.console();
+    // >クラスのエクスポート
+</script>
+<script>
+    // 動的インポート
+    async function asyncFunction() {
+        const { default: defaultFn, object, fn, exClass } = await import("./exports.js");
+        defaultFn();
+        console.log(object);
+        fn();
+        exClass.console();
+    }
+    asyncFunction();
+</script>

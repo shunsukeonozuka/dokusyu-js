@@ -1,0 +1,26 @@
+<script>
+    "use strict";
+
+    // ①
+    let protected = "守り";
+    // >Uncaught SyntaxError: Unexpected strict mode reserved word
+    // エラー理由：予約語
+
+    // ②
+    justVariable = "ただの変数？";
+    // >Uncaught ReferenceError: justVariable is not defined
+    // エラー理由：宣言されていない変数への代入
+
+    // ③
+    undefined = 0;
+    // >Uncaught TypeError: Cannot assign to read only property 'undefined' of object '#<Window>'
+    // エラー理由：書き込み不可のプロパティ変更
+
+    // ④
+    {
+        function fn() {}
+    }
+    fn();
+    // >Uncaught ReferenceError: fn is not defined
+    // エラー理由：ブロックスコープ外
+</script>

@@ -1,0 +1,22 @@
+<!-- 通常モード -->
+<!-- <script>
+    if (true) {
+        function functionInBlock() {
+            console.log("こんにちは");
+        }
+    }
+    functionInBlock(); // ブロックスコープ外からも実行可能
+    // >こんにちは
+</script> -->
+
+<!-- Strictモード -->
+<script>
+    "use strict";
+    if (true) {
+        function functionInBlock() {
+            console.log("こんにちは");
+        }
+    }
+    functionInBlock();
+    // >Uncaught ReferenceError: functionInBlock is not defined
+</script>

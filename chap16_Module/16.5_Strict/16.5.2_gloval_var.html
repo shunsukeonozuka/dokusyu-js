@@ -1,0 +1,13 @@
+<!-- 通常モード -->
+<!-- <script>
+    globalVariable = "これはグローバルスコープに配置されます。";
+    console.log(window.globalVariable);
+    // >これはグローバルスコープに配置されます。
+</script> -->
+
+<!-- Strictモード -->
+<script>
+    "use strict";
+    globalVariable = "これはエラーになります。";
+    // >Uncaught ReferenceError: globalVariable is not defined
+</script>

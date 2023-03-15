@@ -1,0 +1,14 @@
+<!-- 通常モード -->
+<!-- <script>
+    // undefinedは書き込み不可のwindowプロパティ
+    window.undefined = "エラーにはなりませんが値も変わりません。";
+    console.log(window.undefined);
+    // >undefined
+</script> -->
+
+<!-- Strictモード -->
+<script>
+    "use strict";
+    window.undefined = "エラーが発生します。";
+    // >Uncaught TypeError: Cannot assign to read only property 'undefined' of object '#<Window>'
+</script>

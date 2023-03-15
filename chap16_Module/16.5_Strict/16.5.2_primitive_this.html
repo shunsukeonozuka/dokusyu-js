@@ -1,0 +1,23 @@
+<!-- 通常モード -->
+<script>
+    // thisを返す関数
+    function whatIsThis() {
+        return this;
+    }
+
+    console.log(whatIsThis.call(10) instanceof Number);
+    // >true  →thisはNumber型のオブジェクトになる
+</script>
+
+<!-- Strictモード -->
+<script>
+    "use strict";
+
+    // thisを返す関数
+    function whatIsThis() {
+        return this;
+    }
+
+    console.log(whatIsThis.call(10) === 10);
+    // >true　→thisはプリミティブ値の10になる
+</script>
