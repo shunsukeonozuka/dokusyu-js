@@ -1,0 +1,30 @@
+<!-- オプショナルチェイニング演算子（?.） -->
+<!-- オブジェクト以外の値に対してプロパティを取得したときにundefinedを返す -->
+<script>
+    // オブジェクト以外にドット演算子を使った場合
+    // const val = undefined.prop; // undefinedはオブジェクトではないためエラー
+    // >Uncaught TypeError: Cannot read properties of undefined (reading 'prop')
+
+    // オプショナルチェイニング演算子を使った場合
+    const val = undefined?.prop;
+    console.log(val);
+    // >undefined
+
+    // オブジェクトが多階層の場合
+    const person = {
+        name: "独習太郎",
+        age: 28,
+        parents: {
+            mother: "Sara",
+            father: "John",
+        },
+    };
+
+    console.log(person.siblings); // undefinedが取得される
+    // >undefined
+
+    console.log(person.siblings?.length); // オプショナルチェイニング演算子の場合
+    // >undefined
+    console.log(person.siblings.length); //ドット演算子の場合、エラー
+    // >Uncaught TypeError: Cannot read properties of undefined (reading 'length')
+</script>

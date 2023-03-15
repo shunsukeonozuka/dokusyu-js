@@ -1,0 +1,13 @@
+<!-- オペランドが真偽値以外の論理積の例 -->
+<!-- すべてtruthyな値であれば、最後の式の値を返す -->
+<!-- falsyな値があれば、その式の値を返す -->
+<script>
+    console.log("hello" && "world");
+    // >world
+    console.log("hello" && undefined);
+    // >undefined
+    console.log(null && "world");
+    // >null
+    console.log("hello" && "world" && "!!");
+    // >!!
+</script>

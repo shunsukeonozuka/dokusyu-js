@@ -1,0 +1,38 @@
+<!-- 単項演算子 -->
+<script>
+    // delete    // オブジェクトから特定のプロパティを削除
+    const obj = { val: 1 };
+    delete obj.val;
+
+    // typeof   // データ型の確認
+    console.log(typeof 1);
+    // >number
+    console.log(typeof "hello");
+    // >string
+
+    // !    // 真偽値に変換して、反対の真偽値を取得
+    console.log(!true);
+    // >false
+    console.log(!false);
+    // >true
+    console.log(!!true);
+    // >true
+    console.log(!"hello"); // truthy→false
+    // >false
+    console.log(!""); // falsy→true
+    // >true
+
+    // +    // Number型への変換
+    console.log(+"10");
+    // >10
+    console.log(+true);
+    // >1
+    console.log(+false);
+    // >0
+
+    // -    // Number型へ変換して、正負を入れ替え
+    console.log(-"1");
+    // >-1
+    console.log(-"2");
+    // >-2
+</script>
