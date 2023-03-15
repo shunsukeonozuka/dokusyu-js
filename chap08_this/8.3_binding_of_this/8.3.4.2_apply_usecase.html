@@ -1,0 +1,14 @@
+<!-- Math.maxで配列内の一番大きな数値を取得する場合 -->
+<script>
+    const vals = [1, 2, 3];
+    // 一番大きな数値を確認
+    console.log(Math.max(vals[0], vals[1], vals[2]));
+    // >3
+</script>
+
+<!-- applyメソッドを使う場合 -->
+<!-- ES6のスプレッド演算子を使うため、現在はあまり使われない -->
+<script>
+    console.log(Math.max.apply(null, vals)); // thisは使用しないため、nullを第1引数に渡す
+    // >3
+</script>

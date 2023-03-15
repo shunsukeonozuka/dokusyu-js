@@ -1,0 +1,11 @@
+<!-- アロー関数に対してはthisの束縛はできない -->
+<script>
+    window.name = "花子";
+
+    const hello = () => {
+        console.log("こんにちは、" + this.name);
+    };
+
+    hello.call({ name: "太郎" }); // アロー関数はthisを持たないため束縛不可
+    // >こんにちは、花子
+</script>

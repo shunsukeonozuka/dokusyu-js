@@ -1,0 +1,13 @@
+<!-- メソッドとして実行された場合のthisの参照先は呼び出し元のオブジェクト -->
+<!-- メソッドとして実行＝「オブジェクト.メソッド()」の形式で実行すること -->
+<script>
+    const taro = {
+        name: "太郎",
+        hello: function () {
+            console.log("こんにちは、" + this.name); // thisはtaroオブジェクトを参照
+        },
+    };
+
+    taro.hello();
+    // >こんにちは、太郎
+</script>

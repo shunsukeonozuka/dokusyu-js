@@ -1,0 +1,14 @@
+<!-- 開発ツールでコールスタックを確認 -->
+<script>
+    function first() {
+        let firstVal = "firstコンテキスト";
+        second();
+    }
+
+    function second() {
+        let secondVal = "secondコンテキスト";
+        debugger; // この地点でコードの実行を停止する
+    }
+
+    first();
+</script>

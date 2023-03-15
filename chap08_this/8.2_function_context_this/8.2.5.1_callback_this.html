@@ -1,0 +1,19 @@
+<!-- コールバック関数におけるthisの参照先 -->
+<!-- オブジェクトのメソッドをコールバック関数としたとき -->
+<script>
+    window.name = "花子";
+
+    const taro = {
+        name: "太郎",
+        hello: function () {
+            console.log("こんにちは、" + this.name);
+        },
+    };
+
+    function greeting(callback) {
+        callback(); // callback関数（taro.hello）がこの時点で実行される。あくまで関数のため、thisの参照先はWindowオブジェクトとなる。
+    }
+
+    greeting(taro.hello); // taro.helloを引数に渡す（この時点ではまだ実行されていない）
+    // >こんにちは、花子
+</script>

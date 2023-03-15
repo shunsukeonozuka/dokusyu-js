@@ -1,0 +1,14 @@
+<!-- 無名関数でメソッドの実行文を囲む -->
+<script>
+    const taro = {
+        name: "太郎",
+        hello: function () {
+            console.log("こんにちは、" + this.name);
+        },
+    };
+
+    setTimeout(function () {
+        taro.hello();
+    }, 2000);
+    // >こんにちは、太郎
+</script>

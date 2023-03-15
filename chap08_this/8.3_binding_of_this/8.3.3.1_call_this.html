@@ -1,0 +1,12 @@
+<!-- callメソッドの使用例 -->
+<!-- callメソッドでは、thisや引数を束縛した新しい関数を作成し、その関数を即時に実行する -->
+<script>
+    const taro = { name: "太郎" };
+
+    function hello(greeting) {
+        console.log(`${greeting}、${this.name}`);
+    }
+
+    hello.call(taro, "こんにちは"); // thisと引数を束縛して関数helloを実行
+    // >こんにちは、太郎
+</script>

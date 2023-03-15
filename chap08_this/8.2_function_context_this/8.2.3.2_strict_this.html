@@ -1,0 +1,11 @@
+<!-- Strictモードでは関数のthisがundefinedになる -->
+<script>
+    "use strict"; // Strictモードを有効化
+
+    function confirmThis() {
+        console.log(this);
+    }
+
+    confirmThis();
+    // >undefined   // Windowオブジェクトではなくundefinedになる
+</script>

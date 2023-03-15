@@ -1,0 +1,20 @@
+<!-- Windowオブジェクト -->
+<!-- Windowオブジェクトはグローバルオブジェクト -->
+<script>
+    // window.は省略してもしなくてもOK
+    window.console.log("こんにちは"); // 先頭は必ず小文字に（○：window、×：Window）
+    console.log("さようなら");
+
+    function fn() {
+        // Windowオブジェクトはコード内のどこからでも参照可能
+        console.log("はい、さようなら");
+    }
+    fn();
+</script>
+
+<!-- グローバルコンテキストのthisの参照先はWindowオブジェクト -->
+<script>
+    // トップレベルで実行した場合のthisはWindowオブジェクトを参照する
+    console.log(this === window);
+    // >true
+</script>

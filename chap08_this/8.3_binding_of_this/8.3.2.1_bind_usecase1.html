@@ -1,0 +1,16 @@
+<!-- 2秒後に”こんにちは、太郎”とコンソールに表示する場合 -->
+<script>
+    window.name = "花子";
+
+    const taro = {
+        name: "太郎",
+        hello: function () {
+            console.log("こんにちは、" + this.name);
+        },
+    };
+
+    setTimeout(taro.hello.bind(taro), 2000); // bindでthisをtaroに固定
+    // >こんにちは、太郎
+    setTimeout(taro.hello, 3000); // bindなし
+    // >こんにちは、花子
+</script>

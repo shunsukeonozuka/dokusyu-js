@@ -1,0 +1,12 @@
+<!-- applyメソッドの使用例 -->
+<!-- callメソッドと同じく即時実行。ただし、applyメソッドでは、引数の束縛に配列を使う -->
+<script>
+    const taro = { name: "太郎" };
+
+    function hello(greeting, name) {
+        console.log(`${greeting}、${name}`);
+    }
+
+    hello.apply(null, ["こんにちは", "太郎"]); // thisと引数を束縛して関数helloを実行
+    // >こんにちは、太郎
+</script>

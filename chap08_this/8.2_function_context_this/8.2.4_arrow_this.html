@@ -1,0 +1,25 @@
+<!-- アロー関数はthisを持たないため、レキシカルスコープのthisを参照しにいく -->
+<script>
+    const taro = {
+        name: "太郎",
+
+        // joro.helloから見たレキシカルスコープはこの関数スコープとなる
+        // このコンテキストのthisはtaroオブジェクト
+        hello: function () {
+            const jiro = {
+                name: "次郎",
+
+                // アロー関数はthisを持たない
+                // レキシカルスコープにthisを探しに行く
+                hello: () => {
+                    console.log("こんにちは、" + this.name);
+                },
+            };
+
+            jiro.hello();
+        },
+    };
+
+    taro.hello();
+    // >こんにちは、太郎
+</script>
