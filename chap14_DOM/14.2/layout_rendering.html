@@ -1,0 +1,16 @@
+<div></div>
+<style>
+    div {
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        transform: scale(5);
+    }
+</style>
+<script>
+    const div = document.querySelector("div");
+    console.log(div.offsetHeight); //offset：レイアウト幅を取得
+    // >20
+    console.log(div.getBoundingClientRect().height); //getBoundingClientRect：レンダリング幅を取得
+    // >100
+</script>

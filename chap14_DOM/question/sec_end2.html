@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h1 id="main-title"></h1>
+                <p class="sub-title"></p>
+            </header>
+            <main id="me" class="body">
+                <p class="child order-1" data-color="blue">1</p>
+                <p class="child order-2" data-color="red">2</p>
+                <p class="child order-3" data-color="orange">3</p>
+            </main>
+            <footer id="footer">
+                <form id="comment">
+                    <textarea id="comment-body"></textarea>
+                    <input type="submit" value="送信" />
+                </form>
+            </footer>
+        </div>
+        <script>
+            const me = document.querySelector("#me");
+
+            // ①子要素をすべて取得
+            console.log(me.children);
+            // >HTMLCollection(3) [p.child.order-1, p.child.order-2, p.child.order-3]
+
+            // ②子要素の中の最初の要素を取得
+            console.log(me.firstElementChild);
+            // ><p class="child order-1" data-color="blue">1</p>
+
+            // ③子要素の中の最後の要素を取得
+            console.log(me.lastElementChild);
+            // ><p class="child order-3" data-color="orange">3</p>
+
+            // ④次の兄弟要素
+            console.log(me.nextElementSibling);
+            // ><footer id="footer">... </footer>
+
+            // ⑤前の兄弟要素
+            console.log(me.previousElementSibling);
+            // ><header>...</header>
+
+            // ⑥親要素
+            console.log(me.parentElement);
+            // ><div id="container">...</div>
+
+            // ⑦次の兄弟要素の子要素
+            console.log(me.nextElementSibling.children);
+            // >HTMLCollection [form#comment, comment: form#comment]
+
+            // ⑧前の兄弟要素の子要素の中の最後の要素
+            console.log(me.previousElementSibling.lastElementChild);
+            // ><p class="sub-title"></p>
+        </script>
+    </body>
+</html>

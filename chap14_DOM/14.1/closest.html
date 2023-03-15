@@ -1,0 +1,17 @@
+<section style="background-color: yellow">
+    これは祖先要素です。
+    <div>
+        <span id="target"></span>
+    </div>
+</section>
+<section style="background-color: orange">
+    これは祖先要素ではありません。
+</section>
+
+<script>
+    setTimeout(() => {
+        const target = document.querySelector("#target");
+        const section = target.closest("section"); //祖先要素のsectionタグを検索
+        section.prepend("発見 -> "); //sectionタグの先頭に文字を追加
+    }, 2000); //2秒後に実行
+</script>

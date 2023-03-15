@@ -1,0 +1,21 @@
+<section id="container">
+    <span class="target-cls"></span>
+    <div class="list">
+        <input name="child1" />
+        <input name="child2" />
+    </div>
+    <p class="target-cls"></p>
+</section>
+<script>
+    const elById = document.getElementById("container"); //id属性から要素を取得
+    console.log(elById);
+
+    const elsByCls = document.getElementsByClassName("target-cls"); //class属性から要素を取得
+    console.log(elsByCls);
+
+    const elsByName = document.getElementsByName("child1"); //name属性から要素を取得
+    console.log(elsByName);
+
+    const elsByTag = document.getElementsByTagName("p"); //タグ名から要素を取得
+    console.log(elsByTag);
+</script>

@@ -1,0 +1,28 @@
+<div id="target">この要素の位置と大きさの取得</div>
+<style>
+    #target {
+        margin: 100px;
+        width: 200px;
+        border: 10px solid red;
+    }
+</style>
+<script>
+    const target = document.querySelector("#target");
+    const targetRect = target.getBoundingClientRect();
+
+    // ①
+    console.log(targetRect.top);
+    // >100
+
+    // ②
+    console.log(targetRect.right);
+    // >328
+
+    // ③
+    console.log(targetRect.width);
+    // >220
+
+    // ④
+    console.log(targetRect.height);
+    // >68
+</script>
