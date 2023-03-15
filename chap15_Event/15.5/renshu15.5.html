@@ -1,0 +1,18 @@
+<body>
+    <div></div>
+    <style>
+        body {
+            margin: 0;
+        }
+        div {
+            background: linear-gradient(#e66465, #9198e5);
+            height: 200vh;
+        }
+    </style>
+    <script>
+        // {passive:true}の状態ではpreventDefault()の実行は無視されるため、スクロール可能
+        document.addEventListener("wheel", (event) => {
+            event.preventDefault(); //スクロール処理を停止できない
+        });
+    </script>
+</body>

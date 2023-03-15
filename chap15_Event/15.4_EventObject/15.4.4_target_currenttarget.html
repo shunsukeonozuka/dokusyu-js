@@ -1,0 +1,17 @@
+<body>
+    <section id="container">
+        <button>ボタン</button>
+    </section>
+    <script>
+        // #container（sectionタグにアクションを登録する）
+        const containerEl = document.querySelector("#container");
+
+        containerEl.addEventListener("click", function (event) {
+            console.log(`currentTarget:[${event.currentTarget.nodeName}]`); // currentTarget：アクションを登録した要素が格納される
+            console.log(`target:[${event.target.nodeName}]`); // target：イベントが発生した要素が格納される
+        });
+
+        // >currentTarget:[SECTION]
+        // >target:[BUTTON]
+    </script>
+</body>

@@ -1,0 +1,30 @@
+<body>
+    <div id="target"></div>
+    <script>
+        // target要素の取得
+        const divTarget = document.querySelector("#target");
+
+        // 要素の中にマウスが移動した場合、要素の背景色を赤色に変更
+        divTarget.onmouseenter = function () {
+            divTarget.style.background = "red";
+        };
+
+        // カーソルが外れた場合、背景色なしに変更
+        divTarget.onmouseleave = function () {
+            divTarget.style.background = "none";
+        };
+    </script>
+    <style>
+        /* 画面の見栄えを調節 */
+        div {
+            position: absolute;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+        }
+        body {
+            background-color: cornsilk;
+        }
+    </style>
+</body>

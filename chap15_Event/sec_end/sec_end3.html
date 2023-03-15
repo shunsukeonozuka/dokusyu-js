@@ -1,0 +1,32 @@
+<article>
+    article
+    <div>
+        div
+        <ul>
+            <li>li</li>
+            <li>li</li>
+            <li>li</li>
+        </ul>
+    </div>
+</article>
+<script>
+    const article = document.querySelector("article");
+
+    article.addEventListener("click", (event) => {
+        event.target.style.background = "red";
+        setTimeout(() => {
+            event.target.style.background = null;
+        }, 1000);
+    });
+</script>
+<style>
+    /* スタイル調整 */
+    article,
+    div,
+    ul,
+    li {
+        padding: 10px;
+        margin: 10px;
+        border: 1px dotted black;
+    }
+</style>

@@ -1,0 +1,18 @@
+<input id="val1" type="number" value="0" /> + <input id="val2" type="number" value="0" />=<span id="answer">0</span>
+<script>
+    const val1 = document.getElementById("val1");
+    const val2 = document.getElementById("val2");
+    const answer = document.getElementById("answer");
+
+    function inputHandler() {
+        answer.textContent = Number(val1.value) + Number(val2.value);
+    }
+
+    val1.addEventListener("input", inputHandler);
+    val2.addEventListener("input", inputHandler);
+</script>
+<style>
+    input {
+        width: 50px;
+    }
+</style>

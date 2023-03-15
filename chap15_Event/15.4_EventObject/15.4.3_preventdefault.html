@@ -1,0 +1,16 @@
+<a href="https://google.com/">Googleへは行かせません。</a>
+<a href="https://yahoo.co.jp/">Yahooへは行かせません。</a>
+<script>
+    // すべてのアンカータグ（a）を取得
+    const links = document.querySelectorAll("a");
+
+    // すべてのアンカータグに対してリンク無効化のアクションを追加
+    links.forEach((link) =>
+        link.addEventListener("click", (event) => {
+            // ブラウザのデフォルト処理を無効化
+            event.preventDefault();
+
+            alert(event.currentTarget.textContent); //アラートの表示
+        })
+    );
+</script>

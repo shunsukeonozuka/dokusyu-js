@@ -1,0 +1,22 @@
+<div>この要素の色が変わります。</div>
+<button id="color">文字色の変更</button>
+
+<!-- アクションの解除がうまくいかない例 -->
+<script>
+    const targetEl = document.querySelector("div");
+    const colorBtn = document.querySelector("#color");
+
+    // アクションの登録：無名関数A
+    colorBtn.addEventListener("click", function (event) {
+        targetEl.style.color = "#ff0000";
+    });
+
+    // アクションの解除（解除できない）：無名関数B
+    colorBtn.removeEventListener("click", function (event) {
+        targetEl.style.color = "#ff0000";
+    });
+</script>
+
+<!-- ▼メモ▼
+    別のメモリ空間に登録された関数となるためNG。
+    同じ参照を保持した関数を渡す必要がある。 -->
