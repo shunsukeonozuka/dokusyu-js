@@ -1,2 +1,2 @@
 # dokusyu-js
-「独習JavaScript」勉強用リポジトリ
+書籍「独習JavaScript」勉強用リポジトリです。
