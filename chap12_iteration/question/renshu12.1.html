@@ -1,0 +1,27 @@
+<script>
+    function rangeIterator(min, max) {
+        let num = min;
+
+        return {
+            next() {
+                if (num < max) {
+                    return {
+                        done: false,
+                        value: num++,
+                    };
+                } else {
+                    return {
+                        done: true,
+                    };
+                }
+            },
+        };
+    }
+
+    const it = rangeIterator(3, 7);
+    let nextNum = it.next();
+    while (!nextNum.done) {
+        console.log(nextNum.value);
+        nextNum = it.next();
+    }
+</script>

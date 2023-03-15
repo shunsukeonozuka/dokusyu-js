@@ -1,0 +1,14 @@
+<script>
+    function totalPrice(taxRate, ...prices) {
+        let totalPrice = 0;
+
+        for (const price of prices) {
+            totalPrice += price;
+        }
+
+        return Math.floor(totalPrice * (1 + taxRate / 100));
+    }
+
+    console.log(totalPrice(10, 1000, 2000));
+    // >3300
+</script>

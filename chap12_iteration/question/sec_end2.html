@@ -1,0 +1,15 @@
+<script>
+    function* genStep(min, max, step) {
+        for (let value = min; value <= max; value += step) {
+            yield value;
+        }
+    }
+
+    const it = genStep(4, 10, 2);
+    let a = it.next();
+
+    while (!a.done) {
+        console.log(a.value);
+        a = it.next();
+    }
+</script>

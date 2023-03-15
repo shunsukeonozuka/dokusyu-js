@@ -1,0 +1,29 @@
+<script>
+    function genStep(min, max, step) {
+        let value = min - step;
+
+        return {
+            next() {
+                value += step;
+                if (value <= max) {
+                    return {
+                        done: false,
+                        value: value,
+                    };
+                } else {
+                    return {
+                        done: true,
+                    };
+                }
+            },
+        };
+    }
+
+    const it = genStep(4, 10, 2);
+    let a = it.next();
+
+    while (!a.done) {
+        console.log(a.value);
+        a = it.next();
+    }
+</script>

@@ -1,0 +1,19 @@
+<script>
+    const chuka = ["回鍋肉", "青椒肉絲", "餃子"];
+    const desert = ["杏仁豆腐", "ゴマ団子"];
+
+    // ①
+    const chuka2 = [...chuka];
+    console.log(chuka2);
+    // >(3) ['回鍋肉', '青椒肉絲', '餃子']
+
+    // ②
+    const chukaDesert = [...chuka, ...desert];
+    console.log(chukaDesert);
+    // >(5) ['回鍋肉', '青椒肉絲', '餃子', '杏仁豆腐', 'ゴマ団子']
+
+    // ③
+    const chukaDesert2 = [...chuka, "担々麺", ...desert];
+    console.log(chukaDesert2);
+    // >(6) ['回鍋肉', '青椒肉絲', '餃子', '担々麺', '杏仁豆腐', 'ゴマ団子']
+</script>

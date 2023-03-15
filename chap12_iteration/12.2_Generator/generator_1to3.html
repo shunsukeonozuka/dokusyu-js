@@ -1,0 +1,21 @@
+<script>
+    function* gen1to3() {
+        let index = 1;
+        yield index; //1回目のnextでこの地点まで実行が完了
+        index++;
+        yield index; //2回目のnextでこの地点まで実行が完了
+        index++;
+        return index; //3回目のnextでこの地点まで実行が完了
+    }
+
+    const generator = gen1to3(); //ジェネレーター関数の実行はGeneratorオブジェクトの生成を意味する
+
+    console.log(generator.next()); //next()の実行によってジェネレーター関数内のコードが実行される
+    // >{value: 1, done: false}
+
+    console.log(generator.next());
+    // >{value: 2, done: false}
+
+    console.log(generator.next());
+    // >{value: 3, done: true}
+</script>

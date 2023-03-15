@@ -1,0 +1,37 @@
+<script>
+    function alphabetIterator(start = "a", end = "z") {
+        if (start > end) {
+            throw "開始文字は終了文字より前のアルファベットを選んでください。";
+        }
+
+        const ALPHABET_ARRAY = "abcdefghijklmnopqrstuvwxyz".split(""); //split：引数で文字列を分割して配列で返す
+
+        const startIndex = ALPHABET_ARRAY.indexOf(start);
+        const endIndex = ALPHABET_ARRAY.indexOf(end);
+
+        const targetAlphabet = ALPHABET_ARRAY.slice(startIndex, endIndex + 1); //endの文字も含めたいので+1
+
+        return {
+            next() {
+                const alphabet = targetAlphabet.shift(); //shift：配列の先頭を取り出す。取り出す要素がなくなった場合underfineを返す
+
+                return {
+                    value: alphabet,
+                    done: alphabet ? false : true, //done：反復の終了を表す。alphabetがunderfineのとき、trueを返す
+                };
+            },
+        };
+    }
+
+    const it = alphabetIterator("c", "e");
+    let nextValue = it.next();
+
+    //doneがtrueのときループを抜ける
+    while (!nextValue.done) {
+        console.log(nextValue);
+        nextValue = it.next(); //次の値をnextValueに格納
+    }
+    // >{value: 'c', done: false}
+    // >{value: 'd', done: false}
+    // >{value: 'e', done: false}
+</script>

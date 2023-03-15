@@ -1,0 +1,36 @@
+<script>
+    function Iterator() {
+        let index = 0;
+        let arry = this;
+
+        return {
+            next() {
+                if (index < arry.length) {
+                    return {
+                        done: false,
+                        value: [index, arry[index++]],
+                    };
+                } else {
+                    return {
+                        done: true,
+                    };
+                }
+            },
+        };
+    }
+
+    // イテレータ登録前の確認
+    for (let item of ["Hello", "World"]) {
+        console.log(item);
+    }
+    // >Hello
+    // >World
+
+    Array.prototype[Symbol.iterator] = Iterator; //既存のイテレータを上書き
+
+    for (let item of ["Hello", "World"]) {
+        console.log(item);
+    }
+    // >(2) [0, 'Hello']
+    // >(2) [1, 'World']
+</script>
