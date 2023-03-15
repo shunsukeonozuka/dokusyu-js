@@ -1,0 +1,16 @@
+<!-- 配列のlengthプロパティはfor...in文では取得されない -->
+<!-- ※lengthプロパティは列挙可能性が無効な状態となっているため。 -->
+<script>
+    // 配列を定義
+    const array = ["リンゴ", "バナナ"];
+
+    // 配列のキーをループで取得
+    for (const key in array) {
+        console.log(key);
+    }
+    // >0
+    // >1
+
+    // 配列の中身を確認
+    console.log(array);
+</script>

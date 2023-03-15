@@ -1,0 +1,16 @@
+<!-- 基本的なfor文の使用例 -->
+<script>
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+    }
+
+    // 条件式を省略した場合の記法
+    for (;;) {
+        const rand = Math.random(); // 0-1のランダムな値を取得
+        console.log(rand);
+        if (rand > 0.5) {
+            // 0.5より大きい場合にfor文を抜ける
+            break;
+        }
+    }
+</script>

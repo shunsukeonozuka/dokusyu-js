@@ -1,0 +1,15 @@
+<!-- オブジェクトの値を配列で取得 -->
+<script>
+    const fruits = { apple: "りんご", banana: "バナナ", orange: "オレンジ" };
+    const values = Object.values(fruits);
+    console.log(values);
+    // >(3) ['りんご', 'バナナ', 'オレンジ']
+
+    // for...of文で値の配列をループ
+    for (const value of values) {
+        console.log(value);
+    }
+    // >りんご
+    // >バナナ
+    // >オレンジ
+</script>

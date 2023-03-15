@@ -1,0 +1,14 @@
+<!-- for...in文 -->
+<!-- オブジェクトの要素に対して繰り返し処理を行うときに使用 -->
+<!-- ※for...in文では渡される要素の順番が担保されていない。 -->
+<script>
+    const fruits = { apple: "りんご", banana: "バナナ", orange: "オレンジ" };
+
+    for (const key in fruits) {
+        console.log(`キー[${key}]値:[${fruits[key]}]`);
+    }
+
+    // >キー[apple]値:[りんご]
+    // >キー[banana]値:[バナナ]
+    // >キー[orange]値:[オレンジ]
+</script>

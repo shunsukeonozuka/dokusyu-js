@@ -1,0 +1,8 @@
+<!-- プロパティ記述子の確認 -->
+<script>
+    const obj = { prop: "値" };
+    const propDesc = Reflect.getOwnPropertyDescriptor(obj, "prop");
+    console.log(propDesc);
+    // >{value: '値', writable: true, enumerable: true, configurable: true}
+    // enumerable（列挙可能性）にtrueがデフォルトで設定されている
+</script>

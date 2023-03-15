@@ -1,0 +1,16 @@
+<!-- 明示的な例外のスロー -->
+<script>
+    try {
+        const num = "3";
+
+        if (typeof num != "number") {
+            throw "numは数値型でなければなりません。";
+        }
+
+        console.log(`${num}x5 = ${num * 5}`);
+    } catch (error) {
+        console.error(error);
+    }
+
+    // >numは数値型でなければなりません。
+</script>

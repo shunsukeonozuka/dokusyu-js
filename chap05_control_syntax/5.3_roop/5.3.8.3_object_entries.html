@@ -1,0 +1,15 @@
+<!-- プロパティと値をペアで保持する配列を取得 -->
+<script>
+    const fruits = { apple: "りんご", banana: "バナナ", orange: "オレンジ" };
+    const entries = Object.entries(fruits);
+    console.log(entries);
+    // >(3) [Array(2), Array(2), Array(2)]
+
+    // for...of文でプロパティと値のペアの配列をループ
+    for (const entry of entries) {
+        console.log(entry[0], entry[1]); // ０番目にプロパティ、1番目に値が格納されている
+    }
+    // >apple りんご
+    // >banana バナナ
+    // >orange オレンジ
+</script>

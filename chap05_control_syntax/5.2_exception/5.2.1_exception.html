@@ -1,0 +1,8 @@
+<!-- 例外発生後のコードは実行されない -->
+<script>
+    const str = "hello";
+    str.toExponential();
+    console.log("この行は実行されません。");
+
+    // >Uncaught TypeError: str.toExponential is not a function
+</script>

@@ -1,0 +1,9 @@
+<!-- Symbol型はfor...inの列挙対象にはならない -->
+<script>
+    const s = Symbol();
+    const obj = { [s]: "Symbol型のプロパティのため、列挙対象とはなりません。" };
+
+    for (const key in obj) {
+        console.log(key, obj[key]);
+    }
+</script>

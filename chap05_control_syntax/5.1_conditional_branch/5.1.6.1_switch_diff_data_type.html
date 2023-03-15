@@ -1,0 +1,11 @@
+<!-- 条件式とcase文の値の型が異なる場合 -->
+<script>
+    const val = 0;
+    switch (val) {
+        case "0":
+            console.log("case文が実行されました。"); //←文字列の"0"
+        default:
+            console.log("default文が実行されました。");
+    }
+    // >default文が実行されました。
+</script>

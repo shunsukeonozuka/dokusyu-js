@@ -1,0 +1,16 @@
+<!-- オブジェクトをfor...of文で使う -->
+<!-- オブジェクトのプロパティを配列で取得 -->
+<script>
+    const fruits = { apple: "りんご", banana: "バナナ", orange: "オレンジ" };
+    const props = Object.keys(fruits);
+    console.log(props);
+    // >(3) ['apple', 'banana', 'orange']
+
+    // for...of文でプロパティの配列をループ
+    for (const prop of props) {
+        console.log(prop, fruits[prop]);
+    }
+    // >apple りんご
+    // >banana バナナ
+    // >orange オレンジ
+</script>
