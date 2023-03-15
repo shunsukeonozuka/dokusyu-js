@@ -1,0 +1,13 @@
+<!-- 引数にオブジェクトを渡したときの挙動に注意 -->
+<!-- 関数内でプロパティの値を変更 -->
+<script>
+    const obj = { val: 1 }; // valの値に1を設定したオブジェクトを定義
+
+    function fn(obj2) {
+        obj2.val = 2;
+    }
+
+    fn(obj); // オブジェクトを関数の引数に使用
+    console.log(obj.val);
+    // >2   // obj.valの値が2になる
+</script>

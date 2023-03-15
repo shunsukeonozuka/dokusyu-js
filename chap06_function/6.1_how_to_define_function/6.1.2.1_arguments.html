@@ -1,0 +1,17 @@
+<!-- 引数は関数内でのみ有効な識別子 -->
+<script>
+    let externalVal = 3;
+
+    // 関数宣言
+    function add5(internalVal) {
+        // 引数はこの関数内で有効
+        return internalVal + 5;
+    }
+
+    const result = add5(externalVal);
+    console.log(result);
+    // >8
+
+    console.log(internalVal);
+    // >Uncaught ReferenceError: internalVal is not defined
+</script>

@@ -1,0 +1,10 @@
+<!-- コールバック関数に引数を渡す -->
+<!-- setTimeoutでは第3引数以下を設定することで、コールバック関数に引数を渡して実行できる -->
+<script>
+    function hello(name) {
+        console.log("こんにちは、" + name);
+    }
+
+    setTimeout(hello, 3000, "独習太郎");
+    // >こんにちは、独習太郎
+</script>

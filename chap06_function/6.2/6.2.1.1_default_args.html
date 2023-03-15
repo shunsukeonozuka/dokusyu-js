@@ -1,0 +1,14 @@
+<!-- デフォルト引数による初期値の設定 -->
+<script>
+    function plus(a, b = 5) {
+        return a + b;
+    }
+
+    // 引数を１つしか渡さない場合
+    console.log(plus(1));
+    // >6   // 引数bにはデフォルト引数の5が設定される
+
+    // 引数を２つ渡した場合
+    console.log(plus(1, 10));
+    // >11
+</script>

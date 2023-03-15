@@ -1,0 +1,18 @@
+<!-- デフォルト引数はundefinedのときに設定される -->
+<script>
+    function hello(greeting = "こんにちは、", person = "独習太郎") {
+        console.log(greeting + person);
+    }
+
+    // 引数にundefinedを渡した場合
+    hello(undefined, undefined);
+    // >こんにちは、独習太郎
+
+    // 引数にnullを渡した場合
+    hello(null, null);
+    // >0   ←null+nullは0+0に変換されるため0となる
+
+    // 引数を省略した場合
+    hello();
+    // >こんにちは、独習太郎　←引数を省略した場合もundefinedが仮引数に渡る
+</script>

@@ -1,0 +1,18 @@
+<!-- 関数宣言と関数式の違い①ー実行文の記述位置 -->
+<script>
+    // 実行文を関数宣言文より前に記述
+    hello();
+    // >こんにちは   // エラーにならない
+
+    function hello() {
+        console.log("こんにちは");
+    }
+
+    // 実行文を関数式より前に記述
+    bye();
+    // >Uncaught ReferenceError: Cannot access 'bye' before initialization
+
+    const bye = function () {
+        console.log("さようなら");
+    };
+</script>

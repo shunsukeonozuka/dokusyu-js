@@ -1,0 +1,12 @@
+<!-- ES Modulesを有効化して関数名の重複エラーを発生させる -->
+<script type="module">
+    // type="module"でES Modulesを有効化
+    function chofuku() {
+        console.log("hello");
+    }
+
+    function chofuku() {
+        console.log("bye");
+    }
+    // >Uncaught SyntaxError: Identifier 'chofuku' has already been declared　←エラーが発生
+</script>

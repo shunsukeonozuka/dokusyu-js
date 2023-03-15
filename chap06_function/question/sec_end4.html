@@ -1,0 +1,19 @@
+<script>
+    setTimeout(name => console.log("こんにちは、" + name), 2000, "しゅんたろ");
+
+    function add(val1, val2) {return val1 + val2;}
+    function minus(val1, val2) {return val1 - val2;}
+
+    function calcAndDisp(callback1, callback2, num1, num2) {
+        const result = callback1(num1, num2);
+        callback2(result);
+    }
+
+    // 3+2の結果がコンソールに表示される
+    calcAndDisp(add, console.log, 3, 2);
+    // >5
+
+    // 3-2の結果がアラートとして画面に表示される
+    calcAndDisp(minus, alert, 3, 2);
+    // >1
+</script>

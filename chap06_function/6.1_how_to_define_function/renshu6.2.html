@@ -1,0 +1,22 @@
+<script>
+    function noArgumentFunc() {
+        console.log("引数がない関数です。");
+    }
+    noArgumentFunc();
+
+    function multiply(num1, num2) {
+        console.log(num1 * num2);
+    }
+    multiply(2, 3);
+    // >6
+    multiply(15, 2, 10);
+    // >30
+
+    function twoArgmentFunc(arg1, arg2) {
+        console.log("arg1:", arg1);
+        console.log("arg2:", arg2);
+    }
+    twoArgmentFunc();
+    twoArgmentFunc(1);
+    twoArgmentFunc(1, 2);
+</script>

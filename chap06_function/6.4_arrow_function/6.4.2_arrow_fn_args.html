@@ -1,0 +1,16 @@
+<!-- アロー関数と無名関数の違い -->
+<script>
+    // 無名関数ではargumentsを使用できる
+    const hello = function () {
+        console.log("こんにちは、" + arguments[0]);
+    };
+    hello("独習太郎");
+    // >こんにちは、独習太郎
+
+    // アロー関数内ではargumentsは使用できない
+    const bye = () => {
+        console.log("さようなら、" + arguments[0]); //エラー発生
+    };
+    bye("独習太郎");
+    // >Uncaught ReferenceError: arguments is not defined
+</script>

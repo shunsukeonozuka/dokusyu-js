@@ -1,0 +1,22 @@
+<!-- 関数はオブジェクトのように他の関数の引数として渡すことができる -->
+<!-- 引数で渡される関数のことをコールバック関数と呼ぶ -->
+<script>
+    // コールバック関数を受け取る関数
+    function saySomething(callback) {
+        const result = callback(); // コールバック関数の実行
+        console.log(`${result}、独習太郎！`);
+    }
+
+    function hello() {
+        return "こんにちは";
+    }
+
+    function bye() {
+        return "さようなら";
+    }
+
+    saySomething(hello); // コールバック関数を引数に設定して、関数を実行
+    // >こんにちは、独習太郎！
+    saySomething(bye); // コールバック関数を引数に設定して、関数を実行
+    // >さようなら、独習太郎！
+</script>

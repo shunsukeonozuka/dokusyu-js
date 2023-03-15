@@ -1,0 +1,13 @@
+<!-- 引数が多い場合にはオブジェクトとしてまとめる -->
+<script>
+    function fn(obj) {
+        // 初期値を設定（Null合体の自己代入を使用）
+        obj.arg1 ??= "初期値1";
+        obj.arg2 ??= "初期値2";
+        console.log(obj.arg1, obj.arg2);
+    }
+
+    const params = { arg2: "引数2" };
+    fn(params);
+    // >初期値1 引数2
+</script>
