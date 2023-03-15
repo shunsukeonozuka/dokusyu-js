@@ -1,0 +1,16 @@
+<!-- prototypeと__proto__は同じオブジェクトを保持する -->
+<script>
+    function Test() {}
+    Test.prototype.hello = function () {
+        console.log("こんにちは");
+    };
+    const instance = new Test();
+
+    console.log(instance.__proto__ === Test.prototype); // __proto__とprototypeは同じオブジェクト
+
+    instance.__proto__.hello(); // __proto__を通してメソッドを実行
+
+    Test();
+    // >true
+    // >こんにちは
+</script>

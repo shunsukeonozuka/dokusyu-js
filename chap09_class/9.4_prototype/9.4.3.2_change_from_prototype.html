@@ -1,0 +1,17 @@
+<!-- クラスのメソッドをprototypeから変更 -->
+<script>
+    class Test {
+        hello() {
+            console.log("こんにちは");
+        }
+    }
+
+    const instance = new Test();
+
+    Test.prototype.hello = function () {
+        console.log("Hello");
+    }; // prototypeのhelloメソッドを上書き
+
+    instance.hello();
+    // >Hello
+</script>

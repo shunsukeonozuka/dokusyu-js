@@ -1,0 +1,25 @@
+<!-- プロパティやメソッドの存在確認 -->
+<script>
+    class Person {
+        constructor() {
+            this.name = "独習太郎";
+        }
+        hello() {
+            console.log("こんにちは");
+        }
+    }
+
+    const taro = new Person();
+
+    console.log(taro.hasOwnProperty("name")); // hasOwnPropertyメソッドを使っったプロパティの存在確認
+    // >true
+
+    console.log("name" in taro); // in演算子を使っったプロパティの存在確認
+    // >true
+
+    console.log(taro.hasOwnProperty("hello")); // hasOwnPropertyメソッドを使ったメソッドの存在確認
+    // >false
+
+    console.log("hello" in taro); // in演算子を使っったメソッドの存在確認
+    // >true
+</script>

@@ -1,0 +1,21 @@
+<!-- オブジェクトリテラルでは毎回定義しなければならない -->
+<script>
+    // ユーザ情報を管理するオブジェクトを仮定した場合
+    // ユーザ：独習太郎
+    const taro = {
+        username: "独習太郎",
+        password: "taro-pwd",
+        login() {
+            console.log(`ログイン[${this.username}/${this.password}]`);
+        },
+    };
+
+    // ユーザ：独習花子
+    const hanako = {
+        username: "独習花子",
+        password: "hanako-pwd",
+        login() {
+            console.log(`ログイン[${this.username}/${this.password}]`);
+        },
+    };
+</script>

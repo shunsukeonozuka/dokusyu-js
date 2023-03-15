@@ -1,0 +1,15 @@
+<!-- __proto__が多階層になっている場合 -->
+<script>
+    // プロトタイプチェーンを遡ってメソッドを検索
+    const obj = {
+        __proto__: {
+            __proto__: {
+                hello() {
+                    console.log("こんにちは");
+                },
+            },
+        },
+    };
+    obj.hello(); // obj.__proto__.__proto__.hello();が実行される
+    // >こんにちは
+</script>

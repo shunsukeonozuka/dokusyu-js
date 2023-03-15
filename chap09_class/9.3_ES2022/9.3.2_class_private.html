@@ -1,0 +1,27 @@
+<!-- パブリックとプライベート -->
+<script>
+    class Counter {
+        #count = 0; // プライベートプロパティ
+
+        // プライベートメソッド
+        #print() {
+            console.log(this.#count);
+        }
+
+        // パブリックメソッド
+        increment() {
+            this.#count++;
+            this.#print(); // プライベートメソッドを実行
+        }
+    }
+
+    const counter = new Counter();
+    counter.increment(); // パブリックメソッドを実行
+    // >1
+
+    counter.#count = 10; // プライベートプロパティはクラス外からアクセス不可！
+    // >Uncaught SyntaxError: Private field '#count' must be declared in an enclosing class
+
+    counter.#print(); // プライベートメソッドはクラス外からの実行不可！
+    // >Uncaught SyntaxError: Private field '#print' must be declared in an enclosing class
+</script>

@@ -1,0 +1,16 @@
+<!-- インスタンスのプロパティの取得・変更 -->
+<script>
+    class TestCls {
+        constructor(arg) {
+            this.prop = arg;
+        }
+    }
+
+    const obj = new TestCls("引数"); // インスタンス化
+    console.log(obj.prop);
+    // >引数    // クラス内でthis.propに設定した値が取得される
+
+    obj.prop = "値の変更"; // オブジェクトのプロパティの値を変更
+    console.log(obj.prop);
+    // >値の変更
+</script>

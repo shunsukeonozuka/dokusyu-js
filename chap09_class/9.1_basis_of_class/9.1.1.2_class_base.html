@@ -1,0 +1,16 @@
+<!-- クラス記法で書き直した場合 -->
+<script>
+    class User {
+        constructor(username, password) {
+            this.username = username; // クラス内で記述するthisは、生成されるインスタンスオブジェクトを表す
+            this.password = password;
+        }
+
+        login() {
+            console.log(`ログイン[${this.username}/${this.password}]`);
+        }
+    }
+
+    const taro = new User("独習太郎", "taro-pwd");
+    const hanako = new User("独習花子", "hanako-pwd");
+</script>

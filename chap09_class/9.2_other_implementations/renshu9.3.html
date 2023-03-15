@@ -1,0 +1,56 @@
+<script>
+    class Person {
+        constructor(firstname, lastname) {
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+
+        get fullname() {
+            return this.lastname + this.firstname;
+        }
+
+        set age(value) {
+            this._age = Number(value);
+        }
+
+        get age() {
+            return this._age;
+        }
+
+        set gender(value) {
+            try {
+                if (value === "男" || value === "女" || value === "トランスジェンダー") {
+                    this._gender = value;
+                } else {
+                    throw 'genderプロパティには"男"、"女"、または"トランスジェンダー"を設定してください。'
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        get gender() {
+            return this._gender;
+        }
+    }
+
+    const taro = new Person("太郎", "独習");
+
+    // ゲッターを通して値を取得
+    console.log(taro.fullname);
+    // >独習太郎
+
+    // セッターを通して文字列で値を設定
+    taro.age = "18";
+
+    // ゲッターを通して値を取得
+    console.log(typeof taro.age);
+    // >number
+
+    // オブジェクトの状態を確認
+    console.log(taro);
+    // >Person {firstname: '太郎', lastname: '独習', _age: 18}
+
+    taro.gender = "その他";
+    console.log(taro.gender);
+</script>

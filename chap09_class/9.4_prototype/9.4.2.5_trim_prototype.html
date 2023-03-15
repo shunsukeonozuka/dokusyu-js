@@ -1,0 +1,16 @@
+<!-- __proto__は省略することが可能 -->
+<script>
+    function Test() {}
+    Test.prototype.hello = function () {
+        console.log("こんにちは");
+    };
+    const instance = new Test();
+
+    console.log(instance.__proto__.hello === instance.hello); // __proto__の関数と一致
+
+    instance.hello(); // __proto__は省略可能
+
+    Test();
+    // >true
+    // >こんにちは
+</script>

@@ -1,0 +1,31 @@
+<!-- メソッド内のthisを通したプロパティの取得・変更 -->
+<script>
+    class User {
+        constructor(username, password) {
+            // インスタンスのプロパティに値を設定
+            this.username = username;
+            this.password = password;
+        }
+
+        login() {
+            // プロパティに設定された値を取得
+            console.log(`ログイン[${this.username}/${this.password}]`);
+        }
+
+        changePassword(pwd) {
+            this.password = pwd; // プロパティ（password）の値を変更
+            console.log(`パスワードが[${this.password}]に変更されました。`);
+        }
+    }
+
+    // インスタンス化
+    const taro = new User("独習太郎", "taro-pwd");
+    taro.login();
+    // >ログイン[独習太郎/taro-pwd]
+
+    taro.changePassword("new-pwd");
+    // >パスワードが[new-pwd]に変更されました。
+
+    taro.login();
+    // >ログイン[独習太郎/new-pwd]
+</script>

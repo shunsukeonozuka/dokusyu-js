@@ -1,0 +1,11 @@
+<!-- instanceofの使用例 -->
+<script>
+    class Parent {}
+    class Child extends Parent {}
+
+    const obj = new Child();
+    console.log(obj instanceof Child);
+    // >true
+    console.log(obj instanceof Parent);
+    // >true
+</script>

@@ -1,0 +1,17 @@
+<script>
+    class Parent {
+        constructor(value) {
+            this.familyName = value;
+        }
+
+        introduction() {console.log(`名字は${this.familyName}です。`);}
+    }
+
+    class Child extends Parent {
+        introduction() {super.introduction();}
+    }
+
+    const taro = new Child("独習");
+    taro.introduction();
+    // >名字は独習です。
+</script>
